@@ -4,7 +4,7 @@ export const Promo = () => {
   return (
     <section className={Styles["promo"]}>
       <div className={Styles["promo__description-block"]}>
-        <h2 className={Styles["promo__title"]}>Твой промо-код</h2>
+        <h2 className={Styles["promo__title"]}>Твой промокод</h2>
         <p className={Styles["promo__description"]}>
           Скидка на все курсы Яндекс Практикума для пользователей нашего сайта!
         </p>
