@@ -1,6 +1,18 @@
+"use client";
+
+import { useState } from "react";
+
 import Styles from "./Header.module.css";
 
 export const Header = () => {
+  const [popupIsOpened, setPopupIsOpened] = useState(false);
+
+  const openPopup = () => {
+    setPopupIsOpened(true);
+  };
+  const closePopup = () => {
+    setPopupIsOpened(false);
+  };
   return (
     <header className={Styles["header"]}>
       <a href="./index.html" className={Styles["logo"]}>
