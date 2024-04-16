@@ -3,6 +3,9 @@
 import { useState } from "react";
 
 import Styles from "./Header.module.css";
+import { Overlay } from "../Overlay/Overlay";
+import { Popup } from "../Popup/Popup";
+import { AuthForm } from "../AuthForm/AuthForm";
 
 export const Header = () => {
   const [popupIsOpened, setPopupIsOpened] = useState(false);
@@ -61,6 +64,10 @@ export const Header = () => {
           </button>
         </div>
       </nav>
+      <Overlay />
+      <Popup>
+        <AuthForm />
+      </Popup>
     </header>
   );
 };
