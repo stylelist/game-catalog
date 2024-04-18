@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Styles from "./Promo.module.css";
 
 export const Promo = () => {
+  const [codeIsVisible, setCodeIsVisible] = useState(false);
+
   return (
     <section className={Styles["promo"]}>
       <div className={Styles["promo__description-block"]}>
