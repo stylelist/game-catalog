@@ -5,6 +5,9 @@ import Styles from "./Promo.module.css";
 
 export const Promo = () => {
   const [codeIsVisible, setCodeIsVisible] = useState(false);
+  const handleButtonClick = () => {
+    !codeIsVisible && setCodeIsVisible(true);
+  };
 
   return (
     <section className={Styles["promo"]}>
