@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Styles from "./Promo.module.css";
 
 export const Promo = () => {
@@ -8,6 +8,18 @@ export const Promo = () => {
   const handleButtonClick = () => {
     !codeIsVisible && setCodeIsVisible(true);
   };
+
+  useEffect(() => {
+    let timeout;
+    if (codeIsVisible) {
+      timeout = setTimeout(() => {
+        setCodeIsVisible(false);
+      }, 5000);
+    }
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [codeIsVisible]);
 
   return (
     <section className={Styles["promo"]}>
